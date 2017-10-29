@@ -148,6 +148,14 @@
             <version>${kotlin.version}</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>io.terminus.boot</groupId>
+            <artifactId>spring-boot-starter-mybatis</artifactId>
+            <version>1.5.1.RELEASE</version>
+        </dependency>
+
+
     </dependencies>
 
 

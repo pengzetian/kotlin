@@ -1,5 +1,6 @@
 package com.test.kotlin.model
 
+import com.test.kotlin.annotation.Model
 import java.io.Serializable
 import java.util.*
 
@@ -11,26 +12,19 @@ import java.util.*
  * Date: 2017/10/29
  * Email: xionggao@terminus.io
  */
+data class User(
 
-class User(
-
-        var id: Long,
+        var id: Long?=null,
 
         /**
          * 用户名
          */
-        var name: String,
+        var name: String?=null,
 
         /**
          * 用户年龄
          */
-        var age: Int,
-
-        /**
-         *  用户生日
-         */
-        var birthday: Date
-
+        var age: Int?=null
 
 ): Serializable
 
