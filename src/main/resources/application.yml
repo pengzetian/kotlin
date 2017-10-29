@@ -1,0 +1,34 @@
+spring.profiles.active: dev
+
+logging:
+  file: ${user.home}/logs/kotlin/kotlin.log
+  level.*: INFO
+  level.io.terminus: DEBUG
+
+server:
+  context-path: /
+  port: 8081
+
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: >
+    com.test.kotlin.model
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/szdf?useUnicode=true&characterEncoding=UTF8
+    username: root
+    password:
+  application:
+    name: kotlin-demo
+
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+
+rpc.mode: true
+
+rpc.dubbo:
+  module: kotlin-trade
+  registryAddress: localhost:2181
